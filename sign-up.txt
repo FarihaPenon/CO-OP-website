@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Sign up</title>
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <style>
+    
+*{
+	margin:0;
+	padding:0;
+	}
+	
+.bg{
+	background-image:linear-gradient(rgba(0,0,0,0.85),rgba(255,247,0,0.45))
+					,url(desk.jpg);
+	height: 220vh;
+	width:100%;
+	position:absolute;
+	background-size: 100% 100%;
+}
+header{
+	position:relative;
+	background-position: center;
+	height: 100vh;
+	background-size: cover;
+	width:100%;
+	//display:none;
+	}
+.navi{
+	position:relative;
+	max-width:1200px;
+	margin:20px auto;
+	background:rgb(247, 189, 103,1);
+	box-sizing:border-box;
+	border-radius:4px;
+	box-shadow:0 2px 5px rgba(0,0,0,.2);
+	//position:sticky;
+}
+.logo{
+	height:80px;
+	width:90px;
+	background-size: cover;
+	background-image:url(c.png);
+	float:left;
+	box-sizing:border-box;
+	margin:0 5px;
+}
+nav{
+	float:right;
+}
+.clearfix{
+	clear:both;
+}
+nav ul{
+	margin:0;
+	padding:0;
+	display:flex;
+}
+nav ul li{
+	list-style:none;
+}
+nav ul li a{
+	display:block;
+	margin:15px 0;
+	padding:20px 20px;
+	text-decoration:none;
+	color:#262626;
+}
+nav ul li a.active1,
+nav ul li a:hover{
+	background:#F26727;
+	color:#fff;
+	transition:.5s;
+}
+.main{
+		position:relative;
+		top:85%;
+		left:50%;
+		transform:translate(-50%,-50%);
+		width:40%;
+		min-width:400px;
+		height:170vh;
+		background:rgba(0,0,0,.3);
+		box-shadow:5px 3px 15px 4px;
+		border-radius:4px;
+		}
+#myform{
+	position:relative;
+	top:5%;
+	left:8%;
+	color:white;
+	line-height:35px;
+	}	
+.log{
+	position:absolute;
+	left:30%;
+	//text-align:center;
+	top:0;
+	font-family: 'Lobster', cursive;
+	color:rgb(247, 189, 103,1);
+	font-size:35px;
+}
+input, #country, #major{
+	position:absolute;
+	width:85%;
+	height:3%;
+	/*position:absolute;
+		top:24%;
+		left:50%;
+		transform:translate(-50%,-50%);
+		width:83%;
+		height:17%;
+		padding-left:7px;
+		font-size:17px;
+		border:none;*/
+	}
+#myform #gen{
+	margin-top:12px;
+	position:absolute;
+	width:50%;
+	height:2%;
+}
+#res{
+	position:absolute;
+	top:98%;
+	left:27%;
+	width:30%;
+	height:3%;
+}
+#button{
+position:absolute;
+	top:105%;
+	left:42%;
+	height:4%;	
+    transform:translate(-50%,-50%);
+	padding-left:7px;
+	font-size:20px;
+	background:rgb(247, 189, 103,1);
+	font-weight:normal;
+	color:#fff;
+	transition:1s all;
+	border:none;
+	width:50%;
+}
+#myform #button:hover{
+	background:#F26727;
+	cursor:pointer;
+	transition:1s all;
+}
+
+input #email:focus{
+	border:2px solid red;
+	transition:0.6s all;
+}
+
+ @media (max-width:960px){
+	.menu-toggle{
+		display:block;
+		width:40px;
+		height:40px;
+		margin:10px;
+		float:right;
+		cursor:pointer;
+		text-align:center;
+		font-size:30px;
+		color:#F26727;
+	}
+	.navi{
+		z-index:1;
+	}
+	.menu-toggle:before{
+		content:'\f0c9';
+		font-family:fontAwesome;
+		line-height:40px;
+	}
+	.menu-toggle.active:before{
+		content:'\f00d';
+		font-family:fontAwesome;
+		}
+	nav{
+		display:none;
+		}
+	nav.active{
+		display:block;
+		width:100%;
+		}
+	nav.active ul{
+		display:block;
+	}
+	nav.active ul li a{
+		margin:0;
+	}
+	
+	.main{
+		height:175vh;
+		top:90%;
+		}
+ /*#myform{
+	position:absolute;
+	top:4%;
+	left:10%;
+	}*/	
+.log{
+	position:absolute;
+	left:35%;
+	text-align:center;
+	top:0;
+	font-family: 'Lobster', cursive;
+	color:rgb(247, 189, 103,1);
+	font-size:25px;
+}
+.bg{
+	height:220vh;
+}
+ }
+</style>
+</head>
+<body>
+<div class="bg">
+    <header>
+	<div class="navi">
+	<a href="#" class="logo"></a>
+  <div class="menu-toggle"></div>
+  <nav>
+    <ul>
+      <li><a href="homePageCo-op.html" class="active1">Home</a></li>
+      <li><a href="#">Jobs Opportunities</a></li>
+      <li><a href="Login.html">Log In or Sign up</a></li>
+      <li><a href="#">Profile</a></li>
+	  <li><a href="#">Purchase</a></li>
+    </ul>
+  </nav>
+  <div class="clearfix"></div>
+  </div>
+  <div class="main">
+	<p class="log">Registration Form</p>
+	<form id="myform" action="" method="post">
+	First name:<br> <input type="text" name="fname"><br>
+    Last name: <br><input type="text" name="lname"><br>
+	Gender:<input type="radio" id="gen" name="r1" value="Male"> Male &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+			<input type="radio" id="gen" name="r1" value="Female"> Female<br>
+	Favorite color:<br>
+	<input type="color" name="favcolor" value="#ff0000"><br>
+	Birthday (date and time):<br>
+    <input type="datetime-local" name="bdaytime"><br>
+	Email:<br><input id="email" type="text" name="mail" required><br>
+	Contact Number:<br><input type="text" name="phno"><br>
+	ADDRESS :<br><input type="type" name="addr"><br>
+	Country:<br><select id="country">
+			<option value="" selected="selected">
+			SELECT A STATE</option>
+			<option value="AL">Canada</option>
+			<option value="AK">USA</option>
+			<option value="AZ">Bangladesh</option>
+			<option value="AR">India</option>
+			</select><br>
+
+	Graduation Date:<br><input type="date" name="grad" min="2010-01-01"><br>
+	Year in School:<br><input type="number" name="yr"><br>
+	Major:<br><select id="major">
+			<option value="" selected="selected">
+			Select your major</option>
+			<option value="AL">BSc - Animal Biology
+			<option value="AK">BSc - Cellular, Molecular & Microbial Biology</option>
+			<option value="AZ">BSc - Chemical Biology</option>
+			<option value="AR">BSc - Chemistry</option>
+			<option value="AK">BSc - Environmental Chemistry</option>
+			<option value="AZ">BSc - Mathematics</option>
+			<option value="AR">BSc - Physics</option>
+			<option value="AR">Undecided/Undeclared</option>
+			</select><br>
+	Password:<br>
+	<input id="password" type="password" name="password"><br>
+	Re-enter Password:<br>
+	<input type="password" name="password2"><br>
+	Privacy:Receive Email Notification<br>
+	<input type="radio" id="gen" name="r1" value="Yes"> Yes &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+			<input type="radio" id="gen" name="r1" value="No"> No<br>
+	<input type="reset" id="res" value="Reset form"><br>
+	<input type="button" id="button" value="Register " onClick="validate()">
+  </form></div>
+  </header>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.4.0.js"
+  integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo="
+  crossorigin="anonymous"></script>
+  <script type="text/javaScript">
+	$(document).ready(function(){
+		$('.menu-toggle').click(function(){
+			$('.menu-toggle').toggleClass('active')
+			$('nav').toggleClass('active')
+			})
+		})
+	function validate() { 
+		var firstpassword=document.f1.password.value;
+		var secondpassword=document.f1.password2.value;
+		if(firstpassword==secondpassword){
+		return true;
+		}
+		else{
+		alert("password must be same!");
+		return false;
+		}
+		
+		var flag=1;
+		if(document.myform.fname.value==""||
+		document.myform.lname.value==""||
+		document.myform.mail.value==""||
+		document.myform.addr.value==""||
+		document.myform.phno.value==""||
+		document.myform.id.value==""||
+		document.myform.pwd.value=="")
+		{
+		alert("Enter all the details");
+		flag=0;
+		}
+		var str=document.myform.phno.value;
+		var x=new RegExp("\\d","g");
+		if(!(str.match(x)))
+		{
+		if(!(str.length==10))
+		flag=0;
+		}
+		var str1=document.myform.id.value;
+		var x1=new RegExp("^[A-Z][a-zA-Z]+$","g");
+		if(!(str1.match(x1)))
+		{
+		flag=0;
+		alert("Invalid UserID");
+		}
+		var str1=document.myform.pwd.value;
+		var x1=new RegExp("^[A-Z][a-zA-Z]+$","g");
+		if(!(str1.match(x1)))
+		{
+		flag=0;
+		alert("Invalid password");
+		}
+		if(flag==1)
+		{
+		alert("VALID INPUT");
+		window.self.location.href="login.html";
+		}
+		else
+		{
+		alert("INVALID INPUT");
+		document.myform.focus();
+		}
+		var email = document.getElementById('email');
+		var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+		if (!filter.test(email.value)) {
+		alert('Please provide a valid email address');
+		email.focus;
+		return false;
+		}
+		}
+</script>
+  
+</body>
+ 
+</html>

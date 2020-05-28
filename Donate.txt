@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Sign up</title>
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <style>
+    
+*{
+	margin:0;
+	padding:0;
+	}
+	
+.bg{
+	background-image:linear-gradient(rgba(0,0,0,0.85),rgba(255,247,0,0.45))
+					,url(desk.jpg);
+	height: 220vh;
+	width:100%;
+	position:absolute;
+	background-size: 100% 100%;
+}
+header{
+	position:relative;
+	background-position: center;
+	height: 100vh;
+	background-size: cover;
+	width:100%;
+	//display:none;
+	}
+.navi{
+	position:relative;
+	max-width:1200px;
+	margin:20px auto;
+	background:rgb(247, 189, 103,1);
+	box-sizing:border-box;
+	border-radius:4px;
+	box-shadow:0 2px 5px rgba(0,0,0,.2);
+	//position:sticky;
+}
+.logo{
+	height:80px;
+	width:90px;
+	background-size: cover;
+	background-image:url(c.png);
+	float:left;
+	box-sizing:border-box;
+	margin:0 5px;
+}
+nav{
+	float:right;
+}
+.clearfix{
+	clear:both;
+}
+nav ul{
+	margin:0;
+	padding:0;
+	display:flex;
+}
+nav ul li{
+	list-style:none;
+}
+nav ul li a{
+	display:block;
+	margin:15px 0;
+	padding:20px 20px;
+	text-decoration:none;
+	color:#262626;
+}
+nav ul li a.active1,
+nav ul li a:hover{
+	background:#F26727;
+	color:#fff;
+	transition:.5s;
+}
+@media (max-width:960px){
+	.menu-toggle{
+		display:block;
+		width:40px;
+		height:40px;
+		margin:10px;
+		float:right;
+		cursor:pointer;
+		text-align:center;
+		font-size:30px;
+		color:#F26727;
+	}
+	.navi{
+		z-index:1;
+	}
+	.menu-toggle:before{
+		content:'\f0c9';
+		font-family:fontAwesome;
+		line-height:40px;
+	}
+	.menu-toggle.active:before{
+		content:'\f00d';
+		font-family:fontAwesome;
+		}
+	nav{
+		display:none;
+		}
+	nav.active{
+		display:block;
+		width:100%;
+		}
+	nav.active ul{
+		display:block;
+	}
+	nav.active ul li a{
+		margin:0;
+	}
+	.bg{
+	height:220vh;
+}
+ }
+ /style>
+</head>
+<body>
+<div class="bg">
+    <header>
+	<div class="navi">
+	<a href="#" class="logo"></a>
+  <div class="menu-toggle"></div>
+  <nav>
+    <ul>
+      <li><a href="homePageCo-op.html" class="active1">Home</a></li>
+      <li><a href="Job Opportunities.html">Jobs Opportunities</a></li>
+      <li><a href="Login.html">Log In or Sign up</a></li>
+      <li><a href="Catalogue.html">Books Catalog</a></li>
+	  <li><a href="Donate.html">Donate</a></li>
+    </ul>
+  </nav>
+  <div class="clearfix"></div>
+  </div>
+    <div class="main">
+	<p><span>Make Connection </span>For Your Future Opportunities<br>
+	<span>Gain Work Experience</span> Before You Graduate</p>
+	<button class="book">Book an Appointment	</button>
+  </div>
+  </header>
+  <script src="https://code.jquery.com/jquery-3.4.0.js"
+  integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo="
+  crossorigin="anonymous"></script>
+  <script type="text/javaScript">
+	$(document).ready(function(){
+		$('.menu-toggle').click(function(){
+			$('.menu-toggle').toggleClass('active')
+			$('nav').toggleClass('active')
+			})
+		})
+  </script>
+	
+</body>
+ 
+</html>

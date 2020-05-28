@@ -1,0 +1,344 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>HomePage</title>
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<style>
+    
+*{
+	margin:0;
+	padding:0;
+	
+}
+*,*::before,*::after{
+	box-sizing:border-box;
+	font-family: sans-serif;
+}
+html{
+	overflow-x:hidden;
+	overflow-y:scroll;
+	//font-family:sans-serif;
+}
+wrapper{
+	display:block;
+	width:100%;
+}
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: gray;
+}
+
+.flex-container  div {
+  background-color:#ffe0b3;
+  width:600px;
+  height:300px;
+  margin: 10px;
+  text-align: center;
+  line-height:normal;
+  font-size: 20px;
+}
+.flex-container .a{
+	width: 100%;
+	font-size:18px;
+	line-height:normal;
+	font-family: 'Open Sans', sans-serif;
+	color:gray;
+	text-align:left;
+	//max-height:400px;
+	margin:auto;
+}
+.flex-container iframe{
+	padding-top:8px;
+}
+.heading1{
+	width:600px;
+	background-color:#F26727;
+	color:white;
+	height:40px;
+	font-family: 'Open Sans', sans-serif;
+	font-size:20px;
+	text-align:center;
+}
+.heading2{
+	width:100%;
+	background-color:#F26727;
+	color:white;
+	padding:5px;
+	height:40px;
+	font-family: 'Open Sans', sans-serif;
+	font-size:20px;
+	text-align:center;
+}
+.a p{
+	padding:10px;
+	text-align: justify;
+  text-justify: inter-word;
+}
+section{
+	display:block;
+	margin:0;
+	padding:0;
+}
+header{
+	background-image:linear-gradient(rgba(0,0,0,0.75),rgba(255,247,0,0.45))
+					, url(c1.jpg);
+	background-position: center;
+	height: 100vh;
+	background-size: cover;
+	width:100%;
+	background-attachment:fixed;
+	//position:absolute;
+}
+.navi{
+	position:relative;
+	max-width:1200px;
+	margin: auto;
+	background:rgb(247, 189, 103,1);
+	box-sizing:border-box;
+	border-radius:4px;
+	box-shadow:0 2px 5px rgba(0,0,0,.2);
+	position: sticky;
+    top: 0;
+}
+.logo{
+	height:80px;
+	width:90px;
+	background-size: cover;
+	background-image:url(c.png);
+	float:left;
+	box-sizing:border-box;
+	margin:0 5px;
+}
+nav{
+	float:right;
+}
+.clearfix{
+	clear:both;
+}
+nav ul{
+	margin:0;
+	padding:0;
+	display:flex;
+}
+nav ul li{
+	list-style:none;
+}
+nav ul li a{
+	display:block;
+	margin:15px 0;
+	padding:20px 20px;
+	text-decoration:none;
+	color:#262626;
+}
+nav ul li a.active1,
+nav ul li a:hover{
+	background:#F26727;
+	color:#fff;
+	transition:.5s;
+}
+.main{
+		position:absolute;
+		top:50%;
+		left:30%;
+		transform:translate(-30%,-50%);
+		}
+.main p{
+	font-family: 'Lobster', cursive;
+	color:#fff;
+	font-size:50px;
+}
+.main p span{
+	color:orange;
+	font-family: 'Lobster', cursive;
+}
+
+
+
+#headingfortext{
+	color:orange;
+	font-family: 'Lobster', cursive;
+	font-size:35px;
+	text-align:center;
+}
+#opensans{
+	font-family: 'Open Sans', sans-serif;
+	font-size:30px;
+	color:gray;
+	text-align:center;
+}
+.book{
+	background-color:#F26727;
+	padding:10px;
+	margin:20px 0;
+	width:250px;
+	height:50px;
+	color:white;
+	font-size:20px;
+}
+footer{
+	  background-color:#f1f1f1;
+	  width:100%;
+	  height:30px;
+	  margin: 10px;
+	  text-align: center;
+	}
+ @media (max-width:960px){
+	.menu-toggle{
+		display:block;
+		width:40px;
+		height:40px;
+		margin:10px;
+		float:right;
+		cursor:pointer;
+		text-align:center;
+		font-size:30px;
+		color:#F26727;
+	}
+	.menu-toggle:before{
+		content:'\f0c9';
+		font-family:fontAwesome;
+		line-height:40px;
+	}
+	.menu-toggle.active:before{
+		content:'\f00d';
+		font-family:fontAwesome;
+		}
+	.navi{
+		z-index:1;
+	}
+	nav{
+		display:none;
+		}
+	nav.active{
+		display:block;
+		width:100%;
+		}
+	nav.active ul{
+		display:block;
+	}
+	nav.active ul li a{
+		margin:0;
+	}
+  .flex-container  div {
+	  background-color:#f1f1f1;
+	  max-width:100%;
+	  margin: 10px;
+	  text-align: center;
+	  line-height:normal;
+	  font-size: 20px;
+}
+
+	.heading1{
+		width:100%;
+		font-size:18px;
+		padding:5px;
+}
+	}
+
+ 
+</style>
+</head>
+<body>
+    <header>
+	<section class="wrapper" id="parallax-1">
+	<div class="navi">
+	<a href="#" class="logo"></a>
+  <div class="menu-toggle"></div>
+  <nav>
+    <ul>
+      <li><a href="homePageCo-op.html" class="active1">Home</a></li>
+      <li><a href="Job Opportunities.html">Jobs Opportunities</a></li>
+      <li><a href="Login.html">Log In or Sign up</a></li>
+      <li><a href="Catalogue.html">Books Catalog</a></li>
+	  <li><a href="Cart.html">Cart</a></li>
+    </ul>
+  </nav>
+  <div class="clearfix"></div>
+  </div>
+  <div class="main">
+	<p><span>Make Connection </span>For Your Future Opportunities<br>
+	<span>Gain Work Experience</span> Before You Graduate</p>
+	<a href="login.html"><button class="book" id="index1">Book an Appointment</button></a>
+	<a href="crossreference.html"><button class="book">Cross Reference	</button></a>
+  </div>
+  </header>
+  
+	  <div class="d-flex">
+		  <h3 class="heading text-uppercase my-1 font-x2" id="headingfortext">Start your Journey</h3>
+		  <p class="my-1" id="opensans">Get the experience and connections you need for a satisfying career</p>
+		  <center><i class="fas fa-angle-double-down"></i></center>
+	  </div>
+		<div class="flex-container">
+				  <div>
+					<h6 class="heading1" id="index2">Coming Out of Your Shell</h6>
+					<iframe width="500" height="250" src="https://www.youtube.com/embed/pqt-fpmRILI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				  </div>
+				
+				<div>
+				  
+					<h6 class="heading1">Preparing for an Interview</h6>
+					<iframe width="500" height="250" src="https://www.youtube.com/embed/BeU4NP9ztcE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				  
+				</div>
+				<div>
+					<h6 class="heading1">Building Confidence & Completing Goals</h6>
+					<iframe width="500" height="250" src="https://www.youtube.com/embed/9dJPmxpyBbc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				  </div>
+				
+				<div >
+				  
+					<h6 class="heading1 ">Overcoming Fear to Find Success</h6>
+					<iframe width="500" height="250" src="https://www.youtube.com/embed/gvVUoCotIqA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				  </div>
+				
+			
+		
+		<div class="a">
+			<h6 class="heading2">  Measuring Your Successes</h6>
+			<p>Students alternate study terms with paid, monitored work-terms in professional
+			industry, non-profit, private business, and public sector organizations.
+			The Co-op program at TRU provides students with a great way to learn valuable
+			career skills and an opportunity to test-drive the wide variety of career options.
+
+
+			<p>Because students earn three credits per Co-op work-term, there is a tuition
+			charge per work-term (semester). The charge is equal to that of a regular three-credit course at TRU.
+			At TRU, students enter Co-op at various points in their education depending on program requirements. 
+			While the summer semester is the most common time to complete work-terms, students are required to complete 
+			work-terms in the fall and/or winter semesters to fulfil their Co-op designation. Co-op work-terms in the 
+			fall and winter semester provides students with additional experience they would not normally receive during the summer.</p>
+		<footer><button class="btn">Read More &raquo;</button></footer>
+		</div>
+  </div>  
+  <script src="https://code.jquery.com/jquery-3.4.0.js"
+  integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo="
+  crossorigin="anonymous"></script>
+  <script type="text/javaScript">
+	$(document).ready(function(){
+		$('.menu-toggle').click(function(){
+			$('.menu-toggle').toggleClass('active')
+			$('nav').toggleClass('active')
+			})
+		})
+  </script>
+	
+</body>
+<footer>
+<button onclick="myFunction()" id="index3">Last Modified</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var x = document.lastModified;
+  document.getElementById("demo").innerHTML = x;
+}
+</script>
+ </footer>
+</html>

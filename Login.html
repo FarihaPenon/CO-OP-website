@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Log-in or Sign up</title>
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <style>
+    
+*{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+	}
+	
+header{
+	background-image:linear-gradient(rgba(0,0,0,0.85),rgba(255,247,0,0.45))
+					,url(login.jpg);
+	background-position: center;
+	height: 100vh;
+	background-size: cover;
+	width:100%;
+	position:fixed;
+	
+}
+.navi{
+	position:relative;
+	max-width:1200px;
+	margin: auto;
+	background:rgb(247, 189, 103,1);
+	box-sizing:border-box;
+	border-radius:4px;
+	box-shadow:0 2px 5px rgba(0,0,0,.2);
+}
+.logo{
+	height:80px;
+	width:90px;
+	background-size: cover;
+	background-image:url(c.png);
+	float:left;
+	box-sizing:border-box;
+	margin:0 5px;
+}
+nav{
+	float:right;
+}
+.clearfix{
+	clear:both;
+}
+nav ul{
+	margin:0;
+	padding:0;
+	display:flex;
+}
+nav ul li{
+	list-style:none;
+}
+nav ul li a{
+	display:block;
+	margin:15px 0;
+	padding:20px 20px;
+	text-decoration:none;
+	color:#262626;
+}
+nav ul li a.active1,
+nav ul li a:hover{
+	background:#F26727;
+	color:#fff;
+	transition:.5s;
+}
+.main{
+		position:absolute;
+		top:45%;
+		left:50%;
+		transform:translate(-50%,-50%);
+		width:44%;
+		height:44%;
+		background:rgba(0,0,0,.3);
+		box-shadow:5px 3px 15px 4px;
+		border-radius:4px;
+		}
+.log{
+	position:absolute;
+	left:38%;
+	top:0;
+	font-family: 'Lobster', cursive;
+	color:rgb(247, 189, 103,1);
+	font-size:35px;
+}
+
+#email{
+		position:absolute;
+		top:24%;
+		left:50%;
+		transform:translate(-50%,-50%);
+		width:83%;
+		height:17%;
+		padding-left:7px;
+		font-size:17px;
+		border:none;
+}
+#password{
+		position:absolute;
+		top:50%;
+		left:50%;
+		transform:translate(-50%,-50%);
+		width:83%;
+		height:17%;
+		padding-left:7px;
+		font-size:17px;
+		border:none;
+}
+button{	
+		position:absolute;
+		top:77%;
+		left:50%;
+		transform:translate(-50%,-50%);
+		width:85%;
+		height:20%;
+		padding-left:7px;
+		font-size:20px;
+		background:rgb(247, 189, 103,1);
+		font-weight:normal;
+		color:#fff;
+		transition:1s all;
+		border:none;
+}
+button:hover{
+	background:#F26727;
+	cursor:pointer;
+	transition:1s all;
+}
+.main a{
+	position:absolute;
+	top:92%;
+	left:50%;
+	transform:translate(-50%,-50%);
+	color:#bfc9ca;
+	font-size:18px;
+	text-decoration:none;
+	transition:0.6s all;
+}
+.main a:hover{
+	color:orange;
+	transition:0.6s all;
+}
+input #email:focus{
+	border:2px solid red;
+	transition:0.6s all;
+}
+#sign-up{
+	//margin-top:30%;
+	//margin-left:50%;
+	position:absolute;
+	top:80%;
+	left:48%;
+	transform:translate(-45%,-50%);
+	width:40%;
+	height:15%;
+	background:rgba(0,0,0,.3);
+	box-shadow:5px 3px 15px 4px;
+	border-radius:4px;
+}
+#sign-up p{
+	position:absolute;
+	left:30%;
+	top:0;
+	font-family: 'Lobster', cursive;
+	color:rgb(247, 189, 103,1);
+	font-size:30px;
+}
+#sign-up .s{	
+		position:absolute;
+		top:70%;
+		left:50%;
+		transform:translate(-50%,-50%);
+		width:80%;
+		height:30%;
+		padding-left:7px;
+		font-size:20px;
+		background:#F26727;
+		font-weight:normal;
+		color:#fff;
+		transition:1s all;
+		border:none;
+		border-radius:4px;
+}
+#sign-up .s:hover{
+	background:rgb(247, 189, 103,1);
+}
+#sign-up .s a{
+	text-decoration:none;
+	color:white;
+}
+
+ @media (max-width:960px){
+	.menu-toggle{
+		display:block;
+		width:40px;
+		height:40px;
+		margin:10px;
+		float:right;
+		cursor:pointer;
+		text-align:center;
+		font-size:30px;
+		color:#F26727;
+	}
+	.navi{
+		z-index:1;
+	}
+	.menu-toggle:before{
+		content:'\f0c9';
+		font-family:fontAwesome;
+		line-height:40px;
+	}
+	.menu-toggle.active:before{
+		content:'\f00d';
+		font-family:fontAwesome;
+		}
+	nav{
+		display:none;
+		}
+	nav.active{
+		display:block;
+		width:100%;
+		}
+	nav.active ul{
+		display:block;
+	}
+	nav.active ul li a{
+		margin:0;
+	}
+	.main{
+		width:70%;
+		height:40%;
+		position:absolute;
+		
+	}
+	.log{
+	position:absolute;
+	left:38%;
+	text-align:center;
+	top:0;
+	font-family: 'Lobster', cursive;
+	color:rgb(247, 189, 103,1);
+	font-size:25px;
+}
+	.main a{
+		position:absolute;
+		top:92%;
+		left:30%;
+		transform:translate(-10%,-30%);
+		color:#bfc9ca;
+		font-size:18px;
+		text-decoration:none;
+		transition:0.6s all;
+	}
+	#sign-up{
+		position:absolute;
+		top:80%;
+		left:48%;
+		width:50%;
+		height:12%;
+}
+	#sign-up p{
+		position:absolute;
+		left:15%;
+		top:0;
+		font-family: 'Lobster', cursive;
+		color:rgb(247, 189, 103,1);
+		font-size:20px;
+}
+	#sign-up .s{	
+		position:absolute;
+		top:65%;
+		left:50%;
+		transform:translate(-50%,-50%);
+		width:80%;
+		height:40%;
+		padding-left:7px;
+		font-size:15px;
+}
+	
+ }
+</style>
+</head>
+<body>
+    <header>
+	<div class="navi">
+	<a href="#" class="logo"></a>
+  <div class="menu-toggle"></div>
+  <nav>
+    <ul>
+      <li><a href="homePageCo-op.html" class="active1">Home</a></li>
+      <li><a href="Job Opportunities.html">Jobs Opportunities</a></li>
+      <li><a href="Login.html">Log In or Sign up</a></li>
+      <li><a href="Catalogue.html">Books Catalog</a></li>
+	  <li><a href="Cart.html">Cart</a></li>
+    </ul>
+  </nav>
+  <div class="clearfix"></div>
+  </div>
+  <div class="main"><form id="myForm" onSubmit="return myFunction1" action="#" method="post">
+	<p class="log">Log-in Form</p>
+	<input id="email" type="text" name="name" placeholder="Enter your mail" required><br>
+	<input id="password" type="password" name="password" placeholder="Enter your password" required><br>
+	<button onclick='checkEmail()' id="index4">Log In</button><br>
+	<a href="#">Lost your Password?</a>
+  </form></div>
+  <div id="sign-up">
+	  <p>Don't have an account?</p><br>
+	  <button class="s"><a href="sign-up.html">Sign-Up</a></button><br>
+  </div>
+  </header>
+  
+  <script src="https://code.jquery.com/jquery-3.4.0.js"
+  integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo="
+  crossorigin="anonymous"></script>
+  <script type="text/javaScript">
+	$(document).ready(function(){
+		$('.menu-toggle').click(function(){
+			$('.menu-toggle').toggleClass('active')
+			$('nav').toggleClass('active')
+			})
+		})
+	function checkEmail() {
+
+    var email = document.getElementById('email');
+    var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+    if (!filter.test(email.value)) {
+    alert('Please provide a valid email address');
+    email.focus;
+    return false;
+ }
+}</script>
+  
+	
+</body>
+ 
+</html>

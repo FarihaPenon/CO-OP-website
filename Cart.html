@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>HomePage</title>
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	
+	<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+	<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+	<style>
+    
+*{
+	margin:0;
+	padding:0;
+	
+}
+*,*::before,*::after{
+	box-sizing:border-box;
+	font-family: sans-serif;
+}
+html{
+	overflow-x:hidden;
+	overflow-y:scroll;
+	background-color:gray;
+	// background: linear-gradient(to right, #ffcc00 0%, #ff3300 100%);
+
+}
+wrapper{
+	display:block;
+	width:100%;
+}
+header{
+	//background-image:linear-gradient(rgba(0,0,0,0.75),rgba(255,247,0,0.45))
+					, url(c1.jpg);
+	//background-position: center;
+	//height: 100vh;
+	//background-size: cover;
+	//width:100%;
+	//background-attachment:fixed;
+	//position:absolute;
+	position: sticky;
+}
+.navi{
+	position:relative;
+	max-width:1200px;
+	margin: auto;
+	background:rgb(247, 189, 103,1);
+	box-sizing:border-box;
+	border-radius:4px;
+	box-shadow:0 2px 5px rgba(0,0,0,.2);
+	position: sticky;
+    top: 0;
+}
+
+
+.logo{
+	height:80px;
+	width:90px;
+	background-size: cover;
+	background-image:url(c.png);
+	float:left;
+	box-sizing:border-box;
+	margin:0 5px;
+}
+nav{
+	float:right;
+}
+.clearfix{
+	clear:both;
+}
+nav ul{
+	margin:0;
+	padding:0;
+	display:flex;
+}
+nav ul li{
+	list-style:none;
+}
+nav ul li a{
+	display:block;
+	margin:15px 0;
+	padding:20px 20px;
+	text-decoration:none;
+	color:#262626;
+}
+nav ul li a.active1,
+nav ul li a:hover{
+	background:#F26727;
+	color:#fff;
+	transition:.5s;
+}
+.main{
+		margin-left:70px;
+		margin-top:50px;
+		}
+.main span{
+	font-family: 'Lobster', cursive;
+	color:#fff;
+	font-size:50px;
+}
+.book{
+	background-color:#F26727;
+	margin:20px 0;
+	width:450px;
+	height:50px;
+	color:white;
+	font-size:20px;
+}
+.main>.infoForm{
+	font-family: 'Open Sans', sans-serif;
+	font-size:30px;
+	color:orange;
+}
+form{
+//position:absolute;
+}
+#thisform{
+	
+	color:white;
+	line-height:35px;
+	}
+	input{
+	//position:absolute;
+	width:400px;
+	height:40px;
+	margin:10px;
+	}
+	#okk ,#resett{
+	background-color:green;
+	color:white;
+	font-size:20px;
+	border:none;
+	}
+ @media (max-width:960px){
+	.menu-toggle{
+		display:block;
+		width:40px;
+		height:40px;
+		margin:10px;
+		float:right;
+		cursor:pointer;
+		text-align:center;
+		font-size:30px;
+		color:#F26727;
+	}
+	.menu-toggle:before{
+		content:'\f0c9';
+		font-family:fontAwesome;
+		line-height:40px;
+	}
+	.menu-toggle.active:before{
+		content:'\f00d';
+		font-family:fontAwesome;
+		}
+	.navi{
+		z-index:1;
+	}
+	nav{
+		display:none;
+		}
+	nav.active{
+		display:block;
+		width:100%;
+		}
+	nav.active ul{
+		display:block;
+	}
+	nav.active ul li a{
+		margin:0;
+	}
+  
+
+ }
+</style>
+</head>
+<body>
+    <header>
+	<section class="wrapper" id="parallax-1">
+	<div class="navi">
+	<a href="#" class="logo"></a>
+  <div class="menu-toggle"></div>
+  <nav>
+    <ul>
+      <li><a href="homePageCo-op.html" class="active1">Home</a></li>
+      <li><a href="Job Opportunities.html">Jobs Opportunities</a></li>
+      <li><a href="Login.html">Log In or Sign up</a></li>
+      <li><a href="Catalogue.html">Books Catalog</a></li>
+	  <li><a href="Donate.html">Donate</a></li>
+    </ul>
+  </nav>
+  <div class="clearfix"></div>
+   </div>
+  </header>
+ 
+  
+  <div class="main">
+	<span>Your cart is empty </span><br>
+	<a href="Catalogue.html"><button class="book">Find Your Favourite Book & Purchase</button></a><br>
+	<p class="infoForm">Fill the information below to buy this book</p>
+  
+  <form name="myform" id="thisform">
+LOGIN ID :<br><input type="text" name="id"><br>
+PASSWORD :<br><input type="password" name="pwd"><br>
+AMOUNT :<br><input type="text" name="amount"><br>
+CREDITCARDNUMBER :<br><input type="PASSWORD" name="num">
+<br>
+
+<input id="okk" type="button" value="Purchase" onClick="validate()"> &nbsp;&nbsp;&nbsp;&nbsp;
+<input id="resett" type="reset" value="Clear" >
+</form>
+</div>
+    <script src="https://code.jquery.com/jquery-3.4.0.js"
+  integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo="
+  crossorigin="anonymous"></script>
+  <script type="text/javaScript">
+	$(document).ready(function(){
+		$('.menu-toggle').click(function(){
+			$('.menu-toggle').toggleClass('active')
+			$('nav').toggleClass('active')
+			})
+		})
+function validate()
+{
+var flag=1;
+if(document.myform.id.value==""|| document.myform.pwd.value==""||
+document.myform.amount.value==""|| document.myform.num.value=="")
+{
+flag=0;
+}
+var str=document.myform.amount.value;
+var x=new RegExp("\\d","g");
+if(!(str.match(x)))
+{ flag=0;
+}
+var str1=document.myform.num.value;
+var x1=new RegExp("\\d","g");
+if(!(str.match(x1)))
+{ flag=0;
+}
+if(flag==1)
+{ alert("VALID INPUT");
+window.self.location.href="order.html";
+} else
+{
+alert("INVALID INPUT");
+document.myform.focus();
+}}
+</script>
+	
+</body>
+ 
+</html>

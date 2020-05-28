@@ -1,0 +1,385 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>HomePage</title>
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<style>
+    
+*{
+	margin:0;
+	padding:0;
+	
+}
+*,*::before,*::after{
+	box-sizing:border-box;
+	font-family: sans-serif;
+}
+html{
+	overflow-x:hidden;
+	overflow-y:scroll;
+	//font-family:sans-serif;
+	background-image:linear-gradient(rgba(0,0,0,0.75),rgba(255,247,0,0.45))
+					, url(job.jpg);
+	background-size: 100% 110%;
+	width: 100%;
+	height: 180%;
+	position: sticky;
+}
+wrapper{
+	display:block;
+	width:100%;
+}
+section{
+	display:block;
+	margin:0;
+	padding:0;
+}
+header{
+	//background-image:linear-gradient(rgba(0,0,0,0.75),rgba(255,247,0,0.45))
+					, url(job.jpg);
+	//background-position: center;
+	//height: 100vh;
+	//background-size: cover;
+	//width:100%;
+	//background-attachment:fixed;
+	//position:absolute;
+	background-size: 100% 110%;
+	width: 100%;
+	height: 100%;
+	position: sticky;
+}
+.navi{
+	position:relative;
+	max-width:1200px;
+	margin: auto;
+	background:rgb(247, 189, 103,1);
+	box-sizing:border-box;
+	border-radius:4px;
+	box-shadow:0 2px 5px rgba(0,0,0,.2);
+	position: sticky;
+    top: 0;
+}
+.logo{
+	height:80px;
+	width:90px;
+	background-size: cover;
+	background-image:url(c.png);
+	float:left;
+	box-sizing:border-box;
+	margin:0 5px;
+}
+nav{
+	float:right;
+}
+.clearfix{
+	clear:both;
+}
+nav ul{
+	margin:0;
+	padding:0;
+	display:flex;
+}
+nav ul li{
+	list-style:none;
+}
+nav ul li a{
+	display:block;
+	margin:15px 0;
+	padding:20px 20px;
+	text-decoration:none;
+	color:#262626;
+}
+nav ul li a.active1,
+nav ul li a:hover{
+	background:#F26727;
+	color:#fff;
+	transition:.5s;
+}
+.columns-2 li a{
+	text-decoration:none;
+	color:white;
+	font-size:20px;
+}
+.book{
+	background-color:#F26727;
+	padding:10px;
+	margin:20px 0;
+	width:250px;
+	height:50px;
+	color:white;
+	font-size:20px;
+}
+.sign,.sign1,.sign2,.sign3,.sign4,.sign5{
+	font-size:22px;
+	color:white;
+	//background-color:black;
+	width:310px;
+	margin:20px 75px;
+}
+	.sign:before,.sign1:before,.sign2:before,.sign3:before,.sign4:before,.sign5:before{
+		content:'\f0c9';
+		font-family:fontAwesome, sans-serif;;
+		line-height:40px;
+		//width:600px;
+		color:white;
+		font-weight: 200 ;
+		//font-stretch: condensed;
+		font-size:22px;
+	}
+	.columns-2 li a:hover{
+	background-color:black;
+	color:orange;
+	
+	}
+	.sign.active:before, .sign1.active:before, .sign2.active:before,
+	.sign3.active:before, .sign4.active:before, .sign5.active:before{
+		content:'\f0ab';
+		font-family:fontAwesome;
+		
+		}
+	.container{
+	
+		 display: flex;
+		 flex-wrap: wrap;
+		 max-width:1300px;
+	margin: 100px auto;
+	}
+	.container div{
+		width:430px;
+	}
+	#akash,#akash1,#akash2,#akash3,#akash4,#akash5{
+		display:none;
+		}
+		.columns-2 {
+		margin-left:20%;
+		list-style:none;
+		}
+	
+ @media (max-width:960px){
+	.menu-toggle{
+		display:block;
+		width:40px;
+		height:40px;
+		margin:10px;
+		float:right;
+		cursor:pointer;
+		text-align:center;
+		font-size:30px;
+		color:#F26727;
+	}
+	.menu-toggle:before{
+		content:'\f0c9';
+		font-family:fontAwesome;
+		line-height:40px;
+	}
+	.menu-toggle.active:before{
+		content:'\f00d';
+		font-family:fontAwesome;
+		}
+	.navi{
+		z-index:1;
+	}
+	nav{
+		display:none;
+		}
+	nav.active{
+		display:block;
+		width:100%;
+		}
+	nav.active ul{
+		display:block;
+	}
+	nav.active ul li a{
+		margin:0;
+	}
+	
+	
+  
+
+ }
+</style>
+</head>
+<body>
+    <header>
+	<section class="wrapper" id="parallax-1">
+	<div class="navi">
+	<a href="#" class="logo"></a>
+  <div class="menu-toggle"></div>
+  <nav>
+    <ul>
+      <li><a href="homePageCo-op.html" class="active1">Home</a></li>
+      <li><a href="Job Opportunities.html">Jobs Opportunities</a></li>
+      <li><a href="Login.html">Log In or Sign up</a></li>
+      <li><a href="Catalogue.html">Books Catalog</a></li>
+	  <li><a href="Donate.html">Donate</a></li>
+  </nav>
+  <div class="clearfix"></div>
+  </div>
+  <div class="container">
+  <div class="main">
+
+	<div class="sign" id="abcd">&nbsp Major Kamloops Employers</div>
+	<div id="akash">
+<ul class="columns-2">
+		<li><a href="http://corporate.bclc.com/careers/"> &rAarr; BC Lottery Corporation</a></li>
+		<li><a href="http://www.bczoo.org/jobpostings.htm"> &rAarr; BC Wildlife Park</a></li>
+		<li><a href="http://www.kamloops.ca/hr/careers.shtml#.VpP1VVKPx-g">&rAarr; City of Kamloops</a></li>
+		<li><a href="http://www.domtar.com/en/careers/index.asp"> &rAarr; Domtar</a></li>
+		<li><a href="http://www.teckcominco.com/"> &rAarr; Highland Valley Copper</a></li>
+		<li><a href="http://www.kamloopsairport.com/working.htm">&rAarr; Kamloops Airport</a></li>
+		<li><a href="http://www.newgold.com/careers">&rAarr; New Gold</a></li>
+		<li><a href="http://www.horizonnorth.ca/careers/"> &rAarr; Horizon North</a></li>
+		<li><a href="http://www.nri-distribution.com/company/careers/">&rAarr; NRI Distribution</a></li>
+		<li><a href="http://careers.roomtogrowbc.com/postingsearch.aspx">&rAarr; Overlander Extended Care</a></li>
+		<li><a href="http://www.roomtogrowbc.ca/">&rAarr; Royal Inland Hospital</a></li>
+		<li><a href="http://www3.sd73.bc.ca/careers">&rAarr; School District #73</a></li>
+		<li><a href="/careers/hr.html">&rAarr; Thompson Rivers University</a></li>
+		<li><a href="http://walmartcanada.ca/">&rAarr; Walmart</a></li>
+</ul>
+</div>
+  </div>
+    <div class="main1">
+	<div class="sign1" id="abcd">&nbsp Most Popular</div>
+	<div id="akash1">
+	<ul class="columns-2">
+	<li><a href="http://search.employment.gov.bc.ca/cgi-bin/a/searchjobs_quick.cgi">&rAarr; BC Public Service Agency</a></li>
+	<li><a href="/careers/hr.html">&rAarr; Employment at TRU</a></li>
+	<li><a href="https://emploisfp-psjobs.cfp-psc.gc.ca/psrs-srfp/applicant/page2440?toggleLanguage=en">&rAarr; Federal Government</a></li>
+	<li><a href="http://jobs-emplois.gc.ca/fswep-pfete/index-eng.php">&rAarr; Federal Student Work Experience Program</a></li>
+	<li><a href="https://www.jobbank.gc.ca/home-eng.do?lang=eng">&rAarr; Public Service Commission of Canada</a></li>
+	<li><a href="http://www.jobbank.gc.ca/">&rAarr; Service Canada Job Bank</a></li>
+	</ul>
+	</div>
+  </div> 
+  <div class="main2">
+	<div class="sign2" id="abcd">&nbsp  General Job Search Engines</div>
+	<div id="akash2">
+		<ul class="columns-2">
+		<li><a href="http://www.adzuna.ca/">&rAarr; Adzuna</a></li>
+		<li><a href="http://www.aerotek.com/">&rAarr; Aerotek</a></li>
+		<li><a href="http://ashtonassociates.com/job-seekers/job-board/">&rAarr; Ashton &amp; Associates Recruiting Inc.</a></li>
+		<li><a href="http://www.bcjobs.com/">&rAarr; BC Jobs</a></li>
+		<li><a href="http://www.bestjobsca.com/">&rAarr; Best Jobs</a></li>
+		<li><a href="http://www.careerbuilder.com/default.aspx?cbRecursionCnt=1&amp;cbsid=ea6cb0ec548b46c3a08f5f827e3dc598-323277198-R5-4">&rAarr; Career Builder</a></li>
+		<li><a href="http://www.careerjet.com/">&rAarr; Career Jet</a></li>
+		<li><a href="http://www.careerowl.ca/">&rAarr; Career Owl</a></li>
+		<li><a href="http://www.eluta.ca/">&rAarr; Eluta</a></li>
+		<li><a href="http://www.glassdoor.ca/index.htm">&rAarr; Glassdoor</a></li>
+		<li><a href="http://www.goodwork.ca/">&rAarr; Good Work</a></li>
+		<li><a href="http://www.canadajobdirectory.ca/hot_jobs.html">&rAarr; Hot Jobs Canada</a></li>
+		<li><a href="http://www.indeed.ca/">&rAarr; Indeed</a></li>
+		<li><a href="http://www.job-applications.ca/">&rAarr; Job Applications</a></li>
+		<li><a href="http://www.jobcareer.ca/">&rAarr; Jobcareer</a></li>
+		<li><a title="JobGurus" href="https://ca.jobgurus.net/">&rAarr; JobGurus</a></li>
+		<li><a href="http://www.jobserve.com/ca/en/Job-Search/">&rAarr; Job Serve</a></li>
+		<li><a href="http://www.jobshark.com/ca/en/Search-for-Jobs/">&rAarr; Job Shark</a></li>
+		<li><a href="http://www.monster.ca/">&rAarr; Monster Canada</a></li>
+		<li><a href="http://neuvoo.ca/en">&rAarr; Neuvoo</a></li>
+		<li><a href="http://www.jobs.ca/">&rAarr; Nicejob</a></li>
+		<li><a href="http://www.simplyhired.ca/">&rAarr; Simply Hired</a></li>
+		<li><a href="http://talentegg.ca/">&rAarr; Talent Egg</a></li>
+		<li><a href="http://www.workopolis.com/">&rAarr; Workopolis</a></li>
+		<li><a href="http://www.wowjobs.ca/">&rAarr; Wow Jobs</a></li>
+		</ul>
+		</div>
+  </div>
+  <div class="main3">
+	<div class="sign3" id="abcd">&nbsp Business</div>
+	<div id="akash3">
+	<ul class="columns-2">
+	<li><a href="http://www.ambitsearch.com/opportunities/">&rAarr; Ambit Search</a></li>
+	<li><a href="http://www.accountingjobs.ca/">&rAarr; Accounting Jobs</a></li>
+	<li><a href="http://www.jobwings.com/">&rAarr; Job Wings</a></li>
+	<li><a href="http://www.hrjob.ca/en/">&rAarr; Human Resources Jobs</a></li>
+	<li><a href="http://www.mybigfuture.ca/">&rAarr; My Big Future</a></li>
+	</ul>
+	</div>
+  </div>
+  <div class="main4">
+	<div class="sign4" id="abcd">&nbsp  Environmental</div>
+	<div id="akash4">
+	<ul class="columns-2">
+	<li><a href="http://www.goodworkcanada.ca/gw.php">&rAarr; Good Work Canada</a></li>
+	<li><a href="http://workcabin.ca/">&rAarr; Work Cabin</a></li>
+	<li><a href="http://www.canadianenvironmental.com/envirojobs/">&rAarr; Canada Environment Jobs</a></li>
+	<li><a href="http://www.ofertia.com/empleos-sostenibles/jobs/">&rAarr; Sustainable Business Jobs</a></li>
+	</ul>
+	</div>
+  </div>
+  <div class="main5">
+	<div class="sign5" id="abcd">&nbsp Health Care</div>
+	<div id="akash5">
+		<ul class="columns-2">
+		<li><a href="http://www.providencehealthcare.org/">&rAarr; Providence Health Care</a></li>
+		<li><a href="http://www.healthcarejob.ca/">&rAarr; Health Care Jobs</a></li>
+		<li><a href="http://www.viha.ca/careers/exploring/">&rAarr; Vancouver Island Health Authority</a></li>
+		<li><a href="http://careers.fraserhealth.ca/">&rAarr; Fraser Health Authority</a></li>
+		<li><a href="http://www.healthcarehiring.com/">&rAarr; Health Care Hiring</a></li>
+		<li><a href="http://www.interiorhealth.ca/sites/careers/Pages/default.aspx">&rAarr; Interior Health Authority</a></li>
+		<li><a href="http://www.smcjobs.com/">&rAarr; Select Medical Connections</a></li>
+		<li><a href="http://careers.phsa.ca/default.htm">&rAarr; Provincial Health Services Authority</a></li>
+		</ul>
+		</div>
+  </div>
+  </div>
+  </header>
+  
+	 
+  
+  <script src="https://code.jquery.com/jquery-3.4.0.js"
+  integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo="
+  crossorigin="anonymous"></script>
+  <script type="text/javaScript">
+	$(document).ready(function(){
+		$('.menu-toggle').click(function(){
+			$('.menu-toggle').toggleClass('active')
+			$('nav').toggleClass('active')
+			})
+		})
+		$(document).ready(function(){
+		$( '.sign').click(function() {
+		$('.sign').toggleClass('active')
+		$('#akash').toggle(1000);
+		});
+		});
+		$(document).ready(function(){
+		$( '.sign1').click(function() {
+		$('.sign1').toggleClass('active')
+		$('#akash1').toggle(1000);
+		});
+		});
+		$(document).ready(function(){
+		$( '.sign2').click(function() {
+		$('.sign2').toggleClass('active')
+		$('#akash2').toggle(1000);
+		});
+		});
+		$(document).ready(function(){
+		$( '.sign3').click(function() {
+		$('.sign3').toggleClass('active')
+		$('#akash3').toggle(1000);
+		});
+		});
+		$(document).ready(function(){
+		$( '.sign4').click(function() {
+		$('.sign4').toggleClass('active')
+		$('#akash4').toggle(1000);
+		});
+		});
+		$(document).ready(function(){
+		$( '.sign5').click(function() {
+		$('.sign5').toggleClass('active')
+		$('#akash5').toggle(1000);
+		});
+		});
+		
+  </script>
+	
+</body>
+ 
+</html>

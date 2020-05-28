@@ -1,0 +1,512 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>HomePage</title>
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	
+	<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+	<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+	<style>
+    
+*{
+	margin:0;
+	padding:0;
+	
+}
+*,*::before,*::after{
+	box-sizing:border-box;
+	font-family: sans-serif;
+}
+html{
+	overflow-x:hidden;
+	overflow-y:scroll;
+	background-color:gray;
+	// background: linear-gradient(to right, #ffcc00 0%, #ff3300 100%);
+
+}
+wrapper{
+	display:block;
+	width:100%;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+ margin-left:40px;
+ width:100%;
+}
+
+.flex-container > div {
+  background-color: #f1f1f1;
+  width: 240px;
+  height:310px;
+  margin: 20px 35px;
+  text-align: center;
+  font-size: 20px;
+}
+.flex-container > div>img {
+  width: 240px;
+  height:310px;
+  position:relative;
+}
+
+#panel1, #flip1 {
+  padding: 5px;
+  text-align: center;
+  background-color: #e5eecc;
+  border: solid 1px #c3c3c3;
+  position:relative;
+  bottom:30px;
+  left:0px;
+  background: linear-gradient(to right, #ffcc00 0%, #ff3300 100%);
+  width: 240px;
+  color:white;
+}
+
+#panel1 {
+  padding: 10px;
+  width: 240px;
+  display: none;
+  bottom:100px;
+  left:0px;
+  background: linear-gradient(to right, #ffcc00 0%, #ff3300 100%);
+  color:white;
+  font-size: 15px;
+  position:relative;
+}
+#panel1 a{
+text-decoration:none;
+color:white;
+}
+#panel2, #flip2 {
+  padding: 5px;
+  text-align: center;
+  background-color: #e5eecc;
+  border: solid 1px #c3c3c3;
+  position:relative;
+  bottom:30px;
+  left:0px;
+  background: linear-gradient(to right, #ffcc00 0%, #ff3300 100%);
+  width: 240px;
+  color:white;
+}
+
+#panel2 {
+  padding: 10px;
+  width: 240px;
+  display: none;
+  bottom:100px;
+  left:0px;
+  background: linear-gradient(to right, #ffcc00 0%, #ff3300 100%);
+  color:white;
+  font-size: 15px;
+  position:relative;
+}
+#panel2 a{
+text-decoration:none;
+color:white;
+}
+#panel3, #flip3 {
+  padding: 5px;
+  text-align: center;
+  background-color: #e5eecc;
+  border: solid 1px #c3c3c3;
+  position:relative;
+  bottom:30px;
+  left:0px;
+  background: linear-gradient(to right, #ffcc00 0%, #ff3300 100%);
+  width: 240px;
+  color:white;
+}
+
+#panel3 {
+  padding: 10px;
+  width: 240px;
+  display: none;
+  bottom:100px;
+  left:0px;
+  background: linear-gradient(to right, #ffcc00 0%, #ff3300 100%);
+  color:white;
+  font-size: 15px;
+  position:relative;
+}
+#panel3 a{
+text-decoration:none;
+color:white;
+}
+#panel4, #flip4 {
+  padding: 5px;
+  text-align: center;
+  background-color: #e5eecc;
+  border: solid 1px #c3c3c3;
+  position:relative;
+  bottom:30px;
+  left:0px;
+  background: linear-gradient(to right, #ffcc00 0%, #ff3300 100%);
+  width: 240px;
+  color:white;
+}
+
+#panel4 {
+  padding: 10px;
+  width: 240px;
+  display: none;
+  bottom:100px;
+  left:0px;
+  background: linear-gradient(to right, #ffcc00 0%, #ff3300 100%);
+  color:white;
+  font-size: 15px;
+  position:relative;
+}
+#panel4 a{
+text-decoration:none;
+color:white;
+}
+#panel5, #flip5 {
+  padding: 5px;
+  text-align: center;
+  background-color: #e5eecc;
+  border: solid 1px #c3c3c3;
+  position:relative;
+  bottom:30px;
+  left:0px;
+  background: linear-gradient(to right, #ffcc00 0%, #ff3300 100%);
+  width: 240px;
+  color:white;
+}
+
+#panel5 {
+  padding: 10px;
+  width: 240px;
+  display: none;
+  bottom:100px;
+  left:0px;
+  background: linear-gradient(to right, #ffcc00 0%, #ff3300 100%);
+  color:white;
+  font-size: 15px;
+  position:relative;
+}
+#panel5 a{
+text-decoration:none;
+color:white;
+}
+#panel6, #flip6 {
+  padding: 5px;
+  text-align: center;
+  background-color: #e5eecc;
+  border: solid 1px #c3c3c3;
+  position:relative;
+  bottom:30px;
+  left:0px;
+  background: linear-gradient(to right, #ffcc00 0%, #ff3300 100%);
+  width: 240px;
+  color:white;
+}
+
+#panel6 {
+  padding: 10px;
+  width: 240px;
+  display: none;
+  bottom:100px;
+  left:0px;
+  background: linear-gradient(to right, #ffcc00 0%, #ff3300 100%);
+  color:white;
+  font-size: 15px;
+  position:relative;
+}
+#panel6 a{
+text-decoration:none;
+color:white;
+}
+#panel7, #flip7 {
+  padding: 5px;
+  text-align: center;
+  background-color: #e5eecc;
+  border: solid 1px #c3c3c3;
+  position:relative;
+  bottom:30px;
+  left:0px;
+  background: linear-gradient(to right, #ffcc00 0%, #ff3300 100%);
+  width: 240px;
+  color:white;
+}
+
+#panel7 {
+  padding: 10px;
+  width: 240px;
+  display: none;
+  bottom:100px;
+  left:0px;
+  background: linear-gradient(to right, #ffcc00 0%, #ff3300 100%);
+  color:white;
+  font-size: 15px;
+  position:relative;
+}
+#panel7 a{
+text-decoration:none;
+color:white;
+}
+#panel8, #flip8 {
+  padding: 5px;
+  text-align: center;
+  background-color: #e5eecc;
+  border: solid 1px #c3c3c3;
+  position:relative;
+  bottom:30px;
+  left:0px;
+  background: linear-gradient(to right, #ffcc00 0%, #ff3300 100%);
+  width: 240px;
+  color:white;
+}
+
+#panel8 {
+  padding: 10px;
+  width: 240px;
+  display: none;
+  bottom:100px;
+  left:0px;
+  background: linear-gradient(to right, #ffcc00 0%, #ff3300 100%);
+  color:white;
+  font-size: 15px;
+  position:relative;
+}
+#panel8 a{
+text-decoration:none;
+color:white;
+}
+header{
+	//background-image:linear-gradient(rgba(0,0,0,0.75),rgba(255,247,0,0.45))
+					, url(c1.jpg);
+	//background-position: center;
+	//height: 100vh;
+	//background-size: cover;
+	//width:100%;
+	//background-attachment:fixed;
+	//position:absolute;
+	position: sticky;
+}
+.navi{
+	position:relative;
+	max-width:1200px;
+	margin: auto;
+	background:rgb(247, 189, 103,1);
+	box-sizing:border-box;
+	border-radius:4px;
+	box-shadow:0 2px 5px rgba(0,0,0,.2);
+	position: sticky;
+    top: 0;
+}
+
+
+.logo{
+	height:80px;
+	width:90px;
+	background-size: cover;
+	background-image:url(c.png);
+	float:left;
+	box-sizing:border-box;
+	margin:0 5px;
+}
+nav{
+	float:right;
+}
+.clearfix{
+	clear:both;
+}
+nav ul{
+	margin:0;
+	padding:0;
+	display:flex;
+}
+nav ul li{
+	list-style:none;
+}
+nav ul li a{
+	display:block;
+	margin:15px 0;
+	padding:20px 20px;
+	text-decoration:none;
+	color:#262626;
+}
+nav ul li a.active1,
+nav ul li a:hover{
+	background:#F26727;
+	color:#fff;
+	transition:.5s;
+}
+
+
+
+
+
+
+ @media (max-width:960px){
+	.menu-toggle{
+		display:block;
+		width:40px;
+		height:40px;
+		margin:10px;
+		float:right;
+		cursor:pointer;
+		text-align:center;
+		font-size:30px;
+		color:#F26727;
+	}
+	.menu-toggle:before{
+		content:'\f0c9';
+		font-family:fontAwesome;
+		line-height:40px;
+	}
+	.menu-toggle.active:before{
+		content:'\f00d';
+		font-family:fontAwesome;
+		}
+	.navi{
+		z-index:1;
+	}
+	nav{
+		display:none;
+		}
+	nav.active{
+		display:block;
+		width:100%;
+		}
+	nav.active ul{
+		display:block;
+	}
+	nav.active ul li a{
+		margin:0;
+	}
+  
+
+ }
+</style>
+</head>
+<body>
+    <header>
+	<section class="wrapper" id="parallax-1">
+	<div class="navi">
+	<a href="#" class="logo"></a>
+  <div class="menu-toggle"></div>
+  <nav>
+    <ul>
+      <li><a href="homePageCo-op.html" class="active1">Home</a></li>
+      <li><a href="Job Opportunities.html">Jobs Opportunities</a></li>
+      <li><a href="Login.html">Log In or Sign up</a></li>
+      <li><a href="Catalogue.html">Book Catalogue</a></li>
+	  <li><a href="Cart.html">Cart</a></li>
+    </ul>
+  </nav>
+  <div class="clearfix"></div>
+  </div>
+  </header>
+  <div class="flex-container">
+  <div>
+		<img src="book22.jpg">
+		<div id="flip1">Explore</div>
+		<div id="panel1"><a href="https://files.quantummethod.org.bd/download?filename=/files/publication/1001_Autosuggestion-To_change_your_life.pdf">Download</a> <a href="#">Favourite</a> <a href="#">Read</a> </div>
+  </div>
+  <div><img src="b5.jpg">
+  <div id="flip2">Explore</div>
+		<div id="panel2"><a href="Cart.html">Download</a> <a href="#">Favourite</a> <a href="#">Read</a> </div>
+  </div>
+  <div>
+  <img src="b6.jpg">
+  <div id="flip3">Explore</div>
+		<div id="panel3"><a href="Cart.html">Download</a> <a href="#">Favourite</a> <a href="#">Read</a> </div>
+  </div>  
+  <div><img src="b7.jpg">
+  <div id="flip4">Explore</div>
+		<div id="panel4"><a href="Cart.html">Download</a> <a href="#">Favourite</a> <a href="#">Read</a> </div>
+  </div>
+  <div>
+  <img src="b8.jpg">
+  <div id="flip5">Explore</div>
+		<div id="panel5"><a href="Cart.html">Download</a> <a href="#">Favourite</a> <a href="#">Read</a> </div>
+  </div>
+  <div>
+  <img src="b9.jpg">
+  <div id="flip6">Explore</div>
+		<div id="panel6"><a href="Cart.html">Download</a> <a href="#">Favourite</a> <a href="#">Read</a> </div>
+  </div>  
+  <div>
+  <img src="b4.jpg">
+  <div id="flip7">Explore</div>
+		<div id="panel7"><a href="Cart.html">Download</a> <a href="#">Favourite</a> <a href="#">Read</a> </div>
+  </div>
+  <div>
+  <img src="b4.jpg">
+  <div id="flip8">Explore</div>
+		<div id="panel8"><a href="Cart.html">Download</a> <a href="#">Favourite</a> <a href="#">Read</a> </div>
+  </div>
+  
+  <div><img src="b4.jpg"></div>  
+  <div><img src="b4.jpg"></div>
+  <div><img src="b4.jpg"></div>
+  <div><img src="b4.jpg"></div>  
+</div>
+
+  <script src="https://code.jquery.com/jquery-3.4.0.js"
+  integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo="
+  crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="slick/slick.min.js"></script>
+				
+  <script type="text/javaScript">
+	$(document).ready(function(){
+		$('.menu-toggle').click(function(){
+			$('.menu-toggle').toggleClass('active')
+			$('nav').toggleClass('active')
+			})
+		})
+$(document).ready(function(){
+  $("#flip1").click(function(){
+    $("#panel1").slideToggle("slow");
+  });
+});
+$(document).ready(function(){
+  $("#flip2").click(function(){
+    $("#panel2").slideToggle("slow");
+  });
+});
+$(document).ready(function(){
+  $("#flip3").click(function(){
+    $("#panel3").slideToggle("slow");
+  });
+});
+$(document).ready(function(){
+  $("#flip4").click(function(){
+    $("#panel4").slideToggle("slow");
+  });
+});
+$(document).ready(function(){
+  $("#flip5").click(function(){
+    $("#panel5").slideToggle("slow");
+  });
+});
+$(document).ready(function(){
+  $("#flip6").click(function(){
+    $("#panel6").slideToggle("slow");
+  });
+});
+$(document).ready(function(){
+  $("#flip7").click(function(){
+    $("#panel7").slideToggle("slow");
+  });
+});
+$(document).ready(function(){
+  $("#flip8").click(function(){
+    $("#panel8").slideToggle("slow");
+  });
+});
+  </script>
+	
+</body>
+ 
+</html>
